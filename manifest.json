@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Music Hotkeys",
+  "version": "1.0.0",
+  "description": "Control YouTube Music playback, volume, and seeking with global keyboard shortcuts.",
+  "permissions": ["tabs"],
+  "host_permissions": ["*://music.youtube.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://music.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "commands": {
+    "play-pause": {
+      "suggested_key": { "default": "MediaPlayPause" },
+      "description": "Play/Pause"
+    },
+    "next-track": {
+      "suggested_key": { "default": "MediaNextTrack" },
+      "description": "Next track"
+    },
+    "previous-track": {
+      "suggested_key": { "default": "MediaPrevTrack" },
+      "description": "Previous track"
+    },
+    "volume-up": {
+      "suggested_key": { "default": "Ctrl+Shift+Up" },
+      "description": "Volume up"
+    },
+    "volume-down": {
+      "suggested_key": { "default": "Ctrl+Shift+Down" },
+      "description": "Volume down"
+    },
+    "seek-forward": {
+      "suggested_key": { "default": "Ctrl+Shift+Right" },
+      "description": "Seek forward 10s"
+    },
+    "seek-back": {
+      "suggested_key": { "default": "Ctrl+Shift+Left" },
+      "description": "Seek back 10s"
+    }
+  }
+}
