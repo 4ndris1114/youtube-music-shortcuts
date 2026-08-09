@@ -35,7 +35,7 @@ Additionally, to be able to use these shortcuts while having another application
 - `background.js` listens for the Chrome commands, checks license/trial status via ExtensionPay, and forwards allowed commands as messages to any open `music.youtube.com` tab.
 - `content.js` handles the messages: play/pause/next/previous click YouTube Music's own player buttons; volume and seeking act directly on the page's `<video>` element.
 - `popup.html`/`popup.js` show trial/paid status and the upgrade flow (also opened as a tab when a hotkey is pressed after the trial ends).
-- `ExtPay.js` is the vendored [ExtensionPay](https://github.com/Glench/ExtPay) client library (LGPL-3.0, used unmodified as recommended by its own docs — not hand-written).
+- `ExtPay.js` is the vendored [ExtensionPay](https://github.com/Glench/ExtPay) client library (AGPL-3.0-or-later, used unmodified as recommended by its own docs — not hand-written).
 
 ## Publishing checklist (Chrome Web Store)
 
